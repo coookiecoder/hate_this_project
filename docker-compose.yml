@@ -1,0 +1,19 @@
+services:
+  session:
+    image: transcendence:42
+    container_name: transcendence
+    build: ./
+    restart: always
+    ports:
+      - "5000:80"
+    volumes:
+      - shared:/mnt/transcendence
+
+volumes:
+
+  shared:
+    driver: local
+    driver_opts:
+      type: none
+      device: /shared
+      o: bind
