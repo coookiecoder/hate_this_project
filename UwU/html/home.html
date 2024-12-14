@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Hello world</title>
-    <script src="../js/Game.js"></script>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <title>Transcendence</title>
+        <link rel="stylesheet" href="../css/common.css">
+    </head>
 
-<body>
-<h1>Welcome to transcendence</h1>
-<p>
-    number of player :
-    <label for="playerNumber"></label><input type="number" min="1" max="128" id="playerNumber" name="playerNumber"/>
-    <button id="validatePlayerNumber" name="validatePlayerNumber" onclick="displayMessage()">Launch</button>
-</p>
-</body>
+    <body>
+        <h1>Welcome to transcendence</h1>
+        <p>
+            number of player :
+            <label for="playerNumber"></label><input type="number" min="1" max="128" id="playerNumber" name="playerNumber"/>
+            <button id="validatePlayerNumber" name="validatePlayerNumber" onclick="launchGame()">Launch</button>
+        </p>
+        <script src="../js/Game.js"></script>
+    </body>
 </html>
