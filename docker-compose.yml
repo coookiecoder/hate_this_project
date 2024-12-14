@@ -15,5 +15,5 @@ volumes:
     driver: local
     driver_opts:
       type: none
-      device: /shared
+      device: /mnt/docker/transcendence
       o: bind
