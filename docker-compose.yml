@@ -6,14 +6,3 @@ services:
     restart: always
     ports:
       - "5000:80"
-    volumes:
-      - shared:/mnt/transcendence
-
-volumes:
-
-  shared:
-    driver: local
-    driver_opts:
-      type: none
-      device: /mnt/docker/transcendence
-      o: bind
