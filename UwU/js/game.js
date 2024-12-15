@@ -1,5 +1,7 @@
 // home part
 
+let playerNumber = 0;
+
 const input = document.getElementById("playerNumber");
 
 if (input != null)
@@ -8,8 +10,8 @@ if (input != null)
 function launchGame() {
     if (input.value <= 128 && input.value >= 1) {
         playerNumber = input.value;
-        document.getElementById("home").style = "display: none;";
-        document.getElementById("game").style = "display: block;";
+        showPage("game");
+        history.pushState({page: 'game'}, '', '/game');
     } else {
         alert("Invalid number");
     }
@@ -25,13 +27,14 @@ function launchGameIfEnter(code) {
 
 // game part
 
-playerList = [];
-playerIndex = 0;
-player1Index = 0;
-player2Index = 0;
-playerNumber = 0;
+let playerList = [];
+let playerIndex = 0;
+let player1Index = 0;
+let player2Index = 0;
+let player1 = "";
+let player2 = "";
 
-document.getElementById("nextGame").style = "display: none;";
+document.getElementById("nextGame").style.display = "none";
 
 function namePlayer() {
     if (playerIndex === playerNumber) {
@@ -41,9 +44,9 @@ function namePlayer() {
     playerIndex++;
 
     if (playerIndex >= playerNumber) {
-        document.getElementById("nextGame").style = "display: block;";
-        document.getElementById("playerInput").style = "display: none;";
-        document.getElementById("addPlayer").style = "display: none;";
+        document.getElementById("nextGame").style.display = "block";
+        document.getElementById("playerInput").style.display = "none";
+        document.getElementById("addPlayer").style.display = "none";
     }
 
     console.log(playerIndex);

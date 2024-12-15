@@ -1,7 +1,6 @@
 FROM debian:stable
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get update -y
-
 RUN DEBIAN_FRONTEND=noninteractive apt-get install apache2 -y
 
 #apache 2 config
